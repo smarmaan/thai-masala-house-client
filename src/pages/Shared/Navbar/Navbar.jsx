@@ -31,11 +31,11 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link> Chef Recipes</Link>
+              <Link to="/all-recipes"> Chef Recipes</Link>
             </li>
 
             <li>
-              <Link>Blog</Link>
+            <Link to="blog">Blog</Link>
             </li>
           </ul>
         </div>
@@ -48,11 +48,11 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link> Chef Recipes</Link>
+            <Link to="/all-recipes"> Chef Recipes</Link>
           </li>
 
           <li>
-            <Link>Blog</Link>
+            <Link to="blog">Blog</Link>
           </li>
         </ul>
       </div>
