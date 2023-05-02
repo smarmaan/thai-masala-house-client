@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,24 +26,48 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <Link> Home</Link>
-            </li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#F9A51A] bg-black" : ""
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
 
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#F9A51A] bg-black" : ""
+              }
+              to="/all-recipes"
+            >
+              Chef Recipes
+            </NavLink>
+
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#F9A51A] bg-black" : ""
+              }
+              to="/blog"
+            >
+              Blog
+            </NavLink>
+
+            {/* 
             <li>
               <Link to="/all-recipes"> Chef Recipes</Link>
             </li>
 
             <li>
-            <Link to="blog">Blog</Link>
-            </li>
+              <Link to="blog">Blog</Link>
+            </li> */}
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">Thai Masala House</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          {/* <li>
             <Link> Home</Link>
           </li>
 
@@ -53,7 +77,34 @@ const Navbar = () => {
 
           <li>
             <Link to="blog">Blog</Link>
-          </li>
+          </li> */}
+
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-[#F9A51A] bg-black" : ""
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-[#F9A51A] bg-black" : ""
+            }
+            to="/all-recipes"
+          >
+            Chef Recipes
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-[#F9A51A] bg-black" : ""
+            }
+            to="/blog"
+          >
+            Blog
+          </NavLink>
         </ul>
       </div>
       <div className="navbar-end">
