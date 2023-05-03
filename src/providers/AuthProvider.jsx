@@ -20,6 +20,10 @@ const AuthProvider = ({ children }) => {
 
   const [loading, setLoading] = useState(true);
 
+  const googleProvider = new GoogleAuthProvider();
+
+  // const githubProvider = new
+
   const createUser = (email, password) => {
     setLoading(true);
 
@@ -31,8 +35,6 @@ const AuthProvider = ({ children }) => {
 
     return signInWithEmailAndPassword(auth, email, password);
   };
-
-  const googleProvider = new GoogleAuthProvider();
 
   const handleGoogleSignIn = () => {
     setLoading(true);
