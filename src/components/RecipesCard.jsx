@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const RecipesCard = ({ recipe }) => {
   // console.log(recipe);
 
-  const {id, recipe_name, preparation, ingredients } = recipe;
+  const { id, recipe_name, preparation, ingredients } = recipe;
 
-  //   console.log(recipe_name, preparation, ingredients);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const handleFavoriteClick = () => {
+    setIsFavorite(true);
+  };
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
@@ -22,7 +26,10 @@ const RecipesCard = ({ recipe }) => {
         {preparation.length < 250 ? (
           <>{preparation}</>
         ) : (
-          <>{preparation.slice(0, 250)}... <Link to={`/recipes/${id}`}> See More</Link>    </>
+          <>
+            {preparation.slice(0, 250)}...{" "}
+            <Link to={`/recipes/${id}`}> See More</Link>{" "}
+          </>
         )}
 
         {ingredients.map((ingredient, index) => (
@@ -30,9 +37,16 @@ const RecipesCard = ({ recipe }) => {
         ))}
 
         <div className="card-actions justify-end">
-        <Link to={`/recipes/${id}`}><button className="btn btn-primary">See More</button></Link> 
-
-          
+          <Link to={`/recipes/${id}`}>
+            <button className="btn btn-primary">See More</button>
+          </Link>
+          <button
+            className="btn btn-primary"
+            disabled={isFavorite}
+            onClick={handleFavoriteClick}
+          >
+            {isFavorite ? "Favorited" : "Favorite"}
+          </button>{" "}
         </div>
       </div>
     </div>
