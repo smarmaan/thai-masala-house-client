@@ -7,7 +7,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { signIn, user } = useContext(AuthContext);
+  const { signIn, user, handleGoogleSignIn } = useContext(AuthContext);
 
   const [passwordType, setPasswordType] = useState("password");
 
@@ -49,6 +49,8 @@ const Login = () => {
   const togglePassword = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
   };
+
+  console.log(user);
 
   console.log(error);
   console.log(success);
@@ -123,13 +125,17 @@ const Login = () => {
 
             <div className="flex items-center justify-center gap-3 my-3">
               <div className="form-control">
-                <button className="btn btn-sm bg-orange-200 hover:bg-orange-400 ">
+                <Link
+                  to="/"
+                  onClick={handleGoogleSignIn}
+                  className="btn btn-sm bg-orange-200 hover:bg-orange-400 "
+                >
                   <img
                     className="w-5"
                     src="../../../public/search.png"
                     alt=""
                   />
-                </button>
+                </Link>
               </div>
               <div className="form-control">
                 <button className="btn btn-sm  bg-orange-200 hover:bg-orange-400">
