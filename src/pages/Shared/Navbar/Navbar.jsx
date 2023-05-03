@@ -2,8 +2,13 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
+
+  const { displayName, photoURL } = user;
 
   const handleLogout = () => {
     logout()
@@ -13,10 +18,10 @@ const Navbar = () => {
       });
   };
 
+  // console.log(displayName, photoURL);
+
   return (
-    <div
-      className={`navbar bg-orange-400 rounded-3xl my-10`}
-    >
+    <div className={`navbar bg-orange-400 rounded-3xl my-10`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -118,11 +123,41 @@ const Navbar = () => {
           </div>
         )} */}
 
-        {user && (
+        {/* {user && (
+          <div>
+            <FaUserCircle className=" text-2xl md:text-4xl"></FaUserCircle>
+          </div>
+        )} */}
+
+        {user?.photoURL ? (
+          <div>
+            <img
+              className="w-10 h-10 rounded-full mx-3"
+              src={photoURL}
+              alt=""
+              id="userPro"
+            />
+          </div>
+        ) : (
           <div>
             <FaUserCircle className=" text-2xl md:text-4xl"></FaUserCircle>
           </div>
         )}
+
+        <ReactTooltip
+          anchorId="userPro"
+          place="bottom"
+          variant="success"
+          content={displayName}
+          className="font-bold text-black"
+          style={{
+            fontWeight: "bold",
+            borderRadius: "10px",
+            fontSize: "18px",
+            backgroundColor: "#f5b04c",
+            padding: "7px",
+          }}
+        />
 
         {user ? (
           <NavLink
