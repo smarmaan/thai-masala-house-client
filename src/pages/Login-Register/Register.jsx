@@ -29,7 +29,15 @@ const Register = () => {
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
-        setSuccess(<p className="text-center">"Registration Successful... <br /> Please visit  <Link className="btn btn-xs " to="/login">Login</Link> page... "</p>);
+        setSuccess(
+          <p className="text-center">
+            "Registration Successful... <br /> Please visit{" "}
+            <Link className="btn btn-xs " to="/login">
+              Login
+            </Link>{" "}
+            page... "
+          </p>
+        );
       })
       .catch((error) => {
         console.error(error);
@@ -50,7 +58,6 @@ const Register = () => {
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           {/* 
-
 
 
              */}
@@ -147,9 +154,7 @@ const Register = () => {
                   id="accept"
                   className="checkbox checkbox-primary"
                 />
-                <span className="label-text">
-                  Accept <Link>Term & Conditions</Link>{" "}
-                </span>
+                <span className="label-text">Accept Term & Conditions </span>
               </label>
             </div>
 
@@ -180,14 +185,14 @@ const Register = () => {
             </p>
 
             {error && (
-              <div className="text-red-600 bg-red-100 rounded-3xl px-2 py-1">
+              <div className="text-red-600 bg-red-100 text-center rounded-3xl px-2 py-1">
                 {error}
               </div>
             )}
 
             {success && (
               <div className="text-green-600 bg-green-100 rounded-3xl px-2 py-1">
-                {success}
+                {success}{" "}
               </div>
             )}
           </form>
