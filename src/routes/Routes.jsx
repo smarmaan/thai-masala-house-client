@@ -5,6 +5,8 @@ import ChefRecipes from "../pages/Chef Recipes/ChefRecipes";
 import Recipes from "../pages/Recipes/Recipes";
 import RecipesLayout from "../layouts/RecipesLayout";
 import Blog from "../pages/Blog/Blog";
+import Login from "../pages/Login-Register/Login";
+import Register from "../pages/Login-Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -46,7 +48,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Blog></Blog>,
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
       // {
       //   path: "*",
