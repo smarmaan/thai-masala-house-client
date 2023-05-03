@@ -4,13 +4,21 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+// console.log(`environment variable`, import.meta.env.VITE_APIKEY);
+// console.log(`environment variable`, import.meta.env.VITE_AUTHDOMAIN);
+// console.log(`environment variable`, import.meta.env.VITE_PROJECTID);
+// console.log(`environment variable`, import.meta.env.VITE_STORAGEBUCKET);
+// console.log(`environment variable`, import.meta.env.VITE_MESSAGINGSENDERID);
+// console.log(`environment variable`, import.meta.env.VITE_APPID);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAfHJqpWWEf83Je9493kedv_5nBDM1FJyI",
-  authDomain: "thai-masala-house.firebaseapp.com",
-  projectId: "thai-masala-house",
-  storageBucket: "thai-masala-house.appspot.com",
-  messagingSenderId: "12481189617",
-  appId: "1:12481189617:web:221a3a03fe192222423b50",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

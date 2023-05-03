@@ -148,7 +148,7 @@ const Register = () => {
                   className="checkbox checkbox-primary"
                 />
                 <span className="label-text">
-                  Accept <Link to="/terms">Term & Conditions</Link>{" "}
+                  Accept <Link>Term & Conditions</Link>{" "}
                 </span>
               </label>
             </div>

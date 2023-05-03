@@ -7,7 +7,7 @@ import RecipesLayout from "../layouts/RecipesLayout";
 import Blog from "../pages/Blog/Blog";
 import Login from "../pages/Login-Register/Login";
 import Register from "../pages/Login-Register/Register";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
