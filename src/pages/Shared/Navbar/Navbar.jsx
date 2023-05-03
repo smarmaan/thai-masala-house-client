@@ -8,7 +8,9 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
 
-  const { displayName, photoURL } = user;
+  // const { displayName, photoURL } = user;
+  const displayName = user?.displayName;
+  const photoURL = user?.photoURL;
 
   const handleLogout = () => {
     logout()
@@ -129,7 +131,7 @@ const Navbar = () => {
           </div>
         )} */}
 
-        {user?.photoURL ? (
+        {user?.photoURL && (
           <div>
             <img
               className="w-10 h-10 rounded-full mx-3"
@@ -137,10 +139,6 @@ const Navbar = () => {
               alt=""
               id="userPro"
             />
-          </div>
-        ) : (
-          <div>
-            <FaUserCircle className=" text-2xl md:text-4xl"></FaUserCircle>
           </div>
         )}
 
