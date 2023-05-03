@@ -3,7 +3,15 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout()
+      .then()
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <div className="navbar bg-orange-400 rounded-3xl my-10">
@@ -31,7 +39,7 @@ const Navbar = () => {
           >
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black" : ""
+                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
               }
               to="/"
             >
@@ -40,7 +48,7 @@ const Navbar = () => {
 
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black" : ""
+                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
               }
               to="/all-recipes"
             >
@@ -49,7 +57,7 @@ const Navbar = () => {
 
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black" : ""
+                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
               }
               to="/blog"
             >
@@ -70,21 +78,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          {/* <li>
-            <Link> Home</Link>
-          </li>
-
-          <li>
-            <Link to="/all-recipes"> Chef Recipes</Link>
-          </li>
-
-          <li>
-            <Link to="blog">Blog</Link>
-          </li> */}
+          
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black" : ""
+              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
             }
             to="/"
           >
@@ -93,7 +91,7 @@ const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black" : ""
+              isActive ? "text-[#F9A51A] bg-black  btn" : " btn"
             }
             to="/all-recipes"
           >
@@ -102,7 +100,7 @@ const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black" : ""
+              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
             }
             to="/blog"
           >
@@ -110,16 +108,7 @@ const Navbar = () => {
           </NavLink>
         </ul>
       </div>
-      {/* <div className="navbar-end">
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "text-[#F9A51A] bg-black" : ""
-          }
-          to="/login"
-        >
-          Login
-        </NavLink>
-      </div> */}
+     
 
       <div className="navbar-end">
         {/* {user && (
@@ -135,11 +124,13 @@ const Navbar = () => {
         )}
 
         {user ? (
-          <button className="btn btn-xs btn-accent">Logout</button>
+          <button onClick={handleLogout} className="btn btn-xs btn-accent">
+            Logout
+          </button>
         ) : (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black" : ""
+              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
             }
             to="/login"
           >
