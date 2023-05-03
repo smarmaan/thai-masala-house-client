@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const [error, setError] = useState("");
@@ -38,6 +39,8 @@ const Register = () => {
             page... "
           </p>
         );
+
+        updateUserData(result.user, name, photo);
       })
       .catch((error) => {
         console.error(error);
@@ -48,6 +51,20 @@ const Register = () => {
 
   const handleAccepted = (e) => {
     setAccepted(e.target.checked);
+  };
+
+  const updateUserData = (user, name, photo) => {
+    updateProfile(user, {
+      displayName: name,
+      photoURL: photo,
+    })
+      .then(() => {
+        console.log("user name updated");
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
   };
 
   return (
