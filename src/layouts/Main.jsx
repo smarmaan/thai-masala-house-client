@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../pages/Shared/Footer/Footer";
 import Navbar from "../pages/Shared/Navbar/Navbar";
 import { Outlet, useNavigation } from "react-router-dom";
+import TimeMarquee from "../pages/Shared/Time Marquee/TimeMarquee";
 
 const Main = () => {
   const navigation = useNavigation();
@@ -20,13 +21,7 @@ const Main = () => {
 
  */}
 
-
-<Mar
-
-
-
-
-
+      <TimeMarquee></TimeMarquee>
 
       <div>
         {navigation.state === "loading" ? (
