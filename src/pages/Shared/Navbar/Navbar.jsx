@@ -80,7 +80,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#f9a51a] bg-black btn" : "text-black btn mx-2 bg-[#f9a51a]"
+              isActive
+                ? "text-[#f9a51a] bg-black btn"
+                : "text-black btn mx-2 bg-[#f9a51a]"
             }
             to="/"
           >
@@ -116,14 +118,20 @@ const Navbar = () => {
 
         {user && (
           <div>
-            <FaUserCircle className=" text-xl md:text-2xl"></FaUserCircle>
+            <FaUserCircle className=" text-2xl md:text-4xl"></FaUserCircle>
           </div>
         )}
 
         {user ? (
-          <button onClick={handleLogout} className="btn btn-xs btn-accent">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+            }
+            to="/"
+            onClick={handleLogout}
+          >
             Logout
-          </button>
+          </NavLink>
         ) : (
           <NavLink
             className={({ isActive }) =>
