@@ -81,7 +81,7 @@ const Login = () => {
                 required
                 className="input input-bordered"
               />
-              <button className="my-2 " onClick={togglePassword}>
+              <button className="my-2 bg-red-200" onClick={togglePassword}>
                 {passwordType === "password" ? (
                   <div className="flex items-center gap-2 justify-end">
                     <FaEye></FaEye>Show PassWord{" "}

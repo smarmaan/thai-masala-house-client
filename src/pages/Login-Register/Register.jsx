@@ -29,6 +29,7 @@ const Register = () => {
       .then((result) => {
         const createdUser = result.user;
         console.log(createdUser);
+        setSuccess(<p className="text-center">"Registration Successful... <br /> Please visit  <Link className="btn btn-xs " to="/login">Login</Link> page... "</p>);
       })
       .catch((error) => {
         console.error(error);
@@ -179,15 +180,15 @@ const Register = () => {
             </p>
 
             {error && (
-              <p className="text-red-600 bg-red-100 rounded-3xl px-2 py-1">
+              <div className="text-red-600 bg-red-100 rounded-3xl px-2 py-1">
                 {error}
-              </p>
+              </div>
             )}
 
             {success && (
-              <p className="text-green-600 bg-green-100 rounded-3xl px-2 py-1">
+              <div className="text-green-600 bg-green-100 rounded-3xl px-2 py-1">
                 {success}
-              </p>
+              </div>
             )}
           </form>
           {/* 

@@ -78,11 +78,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          
-
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+              isActive ? "text-[#f9a51a] bg-black btn" : "text-black btn mx-2 bg-[#f9a51a]"
             }
             to="/"
           >
@@ -108,7 +106,6 @@ const Navbar = () => {
           </NavLink>
         </ul>
       </div>
-     
 
       <div className="navbar-end">
         {/* {user && (
