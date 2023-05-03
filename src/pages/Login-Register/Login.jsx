@@ -11,7 +11,8 @@ import google from "../../../public/search.png";
 import github from "../../../public/github.png";
 
 const Login = () => {
-  const { signIn, user, handleGoogleSignIn } = useContext(AuthContext);
+  const { signIn, user, handleGoogleSignIn, handleGitHubSignIn } =
+    useContext(AuthContext);
 
   const [passwordType, setPasswordType] = useState("password");
 
@@ -130,7 +131,6 @@ const Login = () => {
             <div className="flex items-center justify-center gap-3 my-3">
               <div className="form-control">
                 <Link
-                  to="/"
                   onClick={handleGoogleSignIn}
                   className="btn btn-sm bg-orange-200 hover:bg-orange-400 "
                 >
@@ -138,13 +138,16 @@ const Login = () => {
                 </Link>
               </div>
               <div className="form-control">
-                <button className="btn btn-sm  bg-orange-200 hover:bg-orange-400">
+                <Link
+                  onClick={handleGitHubSignIn}
+                  className="btn btn-sm  bg-orange-200 hover:bg-orange-400"
+                >
                   <img
                     className="w-5 bg-white rounded-full"
                     src={github}
                     alt=""
                   />{" "}
-                </button>
+                </Link>
               </div>
             </div>
 
