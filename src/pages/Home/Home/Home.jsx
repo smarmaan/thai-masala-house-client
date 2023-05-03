@@ -18,10 +18,10 @@ const Home = () => {
   return (
     <div className="">
       <Header></Header>
+
       <TimeMarquee></TimeMarquee>
 
-
-      <h1 className="mt-24 text-center "> all chefs </h1>
+      <h1 className="mt-24 text-center "> All chefs Data </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20 justify-center items-center mx-auto">
         {chefs.map((chef) => (

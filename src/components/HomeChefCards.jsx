@@ -14,10 +14,10 @@ const HomeChefCards = ({ chef }) => {
         <img src={picture} alt="Shoes" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{name}</h2>
-        <p>{yearsOfExperience}</p>
-        <p>{numberOfRecipes}</p>
-        <p>{likes}</p>
+        <h2 className="card-title">name: {name}</h2>
+        <p>years Of Experience :{yearsOfExperience}</p>
+        <p>number Of Recipes:{numberOfRecipes}</p>
+        <p>likes : {likes}</p>
         <div className="card-actions">
           <Link to={`/chef/${chef.id}`}>
             <button className="btn btn-primary">View Recipes</button>
