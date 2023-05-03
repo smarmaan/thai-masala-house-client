@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HomeChefCards from "../../../components/HomeChefCards";
 import Header from "../../Shared/Header/Header";
+import TimeMarquee from "../../Shared/Time Marquee/TimeMarquee";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -17,6 +18,8 @@ const Home = () => {
   return (
     <div className="">
       <Header></Header>
+      <TimeMarquee></TimeMarquee>
+
 
       <h1 className="mt-24 text-center "> all chefs </h1>
 

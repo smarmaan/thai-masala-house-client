@@ -56,7 +56,7 @@ const Main = () => {
       )) || (
         <div>
           <Navbar></Navbar>
-          <TimeMarquee></TimeMarquee>
+          {/* <TimeMarquee></TimeMarquee> */}
 
           <Outlet></Outlet>
 

@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 const TimeMarquee = () => {
   return (
-    <div className="card  bg-orange-400 mx-auto my-10 text-gray-800">
+    <div className="card h-56 bg-orange-400 mx-auto my-10 text-gray-800">
       <div className="card-body items-center text-center">
         <h1 className="text-center text-2xl md:text-4xl font-sans font-extrabold ">
           {" "}
