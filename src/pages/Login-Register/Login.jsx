@@ -22,7 +22,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const from = location?.state?.from?.pathname || "/";
 
@@ -32,7 +32,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
+    // console.log(email, password);
 
     setError("");
     setSuccess("");
@@ -46,8 +46,10 @@ const Login = () => {
         setSuccess("Login Successful");
       })
       .catch((error) => {
-        console.error(error);
+        console.log(error.message);
         setError(error.message);
+        
+        return;
       });
   };
 
@@ -58,7 +60,7 @@ const Login = () => {
   console.log(user);
 
   console.log(error);
-  console.log(success);
+  // console.log(success);
   return (
     <div className="hero min-h-screen bg-base-200 rounded-3xl my-6">
       {/* min-h-screen  */}
@@ -162,6 +164,18 @@ const Login = () => {
                 </Link>
               </span>
             </p>
+
+            {error && (
+              <div className="text-red-600 bg-red-100 rounded-3xl px-2 py-1">
+                {error}
+              </div>
+            )}
+
+            {success && (
+              <div className="text-green-600 bg-green-100 rounded-3xl px-2 py-1">
+                {success}
+              </div>
+            )}
           </form>
         </div>
       </div>
