@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }) => {
   if (loading) {
     return (
       <div className="h-screen flex justify-center items-center">
-        <button className="btn btn-primary btn-lg loading justify-center items-center">
+        <button className="btn btn-accent btn-lg loading justify-center items-center">
           loading
         </button>
       </div>

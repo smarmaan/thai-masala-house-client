@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
 const Navbar = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user, logout, loading } = useContext(AuthContext);
 
   const handleLogout = () => {
     logout()
@@ -14,7 +14,11 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-orange-400 rounded-3xl my-10">
+    <div
+      className={`navbar ${
+        loading && "hidden"
+      } bg-orange-400 rounded-3xl my-10`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
