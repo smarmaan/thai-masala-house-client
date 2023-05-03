@@ -10,6 +10,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <div> 404</div>,
     children: [
       {
         path: "/",
@@ -43,6 +44,14 @@ export const router = createBrowserRouter([
         path: "blog",
         element: <Blog></Blog>,
       },
+      {
+        path: "login",
+        element: <Blog></Blog>,
+      },
+      // {
+      //   path: "*",
+      //   element: <div> 404 no found</div>,
+      // },
     ],
   },
 ]);
