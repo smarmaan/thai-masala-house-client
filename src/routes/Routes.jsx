@@ -27,7 +27,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef-details/${params.id}`),
+          fetch(
+            `https://thai-masala-house-server-smarmaan.vercel.app/chef-details/${params.id}`
+          ),
       },
       {
         path: "recipes",
@@ -45,7 +47,9 @@ export const router = createBrowserRouter([
               </PrivateRoute>
             ),
             loader: ({ params }) =>
-              fetch(`http://localhost:5000/recipes/${params.id}`),
+              fetch(
+                `https://thai-masala-house-server-smarmaan.vercel.app/recipes/${params.id}`
+              ),
           },
         ],
       },
@@ -57,7 +61,8 @@ export const router = createBrowserRouter([
             <ChefRecipes></ChefRecipes>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/recipes`),
+        loader: () =>
+          fetch(`https://thai-masala-house-server-smarmaan.vercel.app/recipes`),
       },
       {
         path: "blog",

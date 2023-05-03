@@ -6,6 +6,10 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
+import google from "../../../public/search.png";
+
+import github from "../../../public/github.png";
+
 const Login = () => {
   const { signIn, user, handleGoogleSignIn } = useContext(AuthContext);
 
@@ -130,18 +134,14 @@ const Login = () => {
                   onClick={handleGoogleSignIn}
                   className="btn btn-sm bg-orange-200 hover:bg-orange-400 "
                 >
-                  <img
-                    className="w-5"
-                    src="../../../public/search.png"
-                    alt=""
-                  />
+                  <img className="w-5" src={google} alt="" />
                 </Link>
               </div>
               <div className="form-control">
                 <button className="btn btn-sm  bg-orange-200 hover:bg-orange-400">
                   <img
                     className="w-5 bg-white rounded-full"
-                    src="../../../public/github.png"
+                    src={github}
                     alt=""
                   />{" "}
                 </button>
