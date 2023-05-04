@@ -20,5 +20,3 @@
 You can access the website at <https://thai-masala-house.web.app/>
 
 You can access the data api at <https://thai-masala-house-server-smarmaan.vercel.app/>
-
-
