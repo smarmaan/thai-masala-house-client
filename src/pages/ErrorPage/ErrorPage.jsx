@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import error from "../../../public/imageError.png";
 
 const ErrorPage = () => {
   return (
-    <section className="flex items-center h-screen p-16 bg-gray-200 rounded-2xl text-gray-900">
-      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <svg
+    <section className="">
+      {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           className="w-40 h-40 text-gray-600"
@@ -29,17 +29,25 @@ const ErrorPage = () => {
             fill="currentColor"
             points="383.958 182.63 360.042 161.37 338.671 185.412 314.63 164.042 293.37 187.958 317.412 209.329 296.042 233.37 319.958 254.63 341.329 230.588 365.37 251.958 386.63 228.042 362.588 206.671 383.958 182.63"
           ></polygon>
-        </svg>
-        <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
-            Error 404
-          </h2>
-          <Link
-            to="/"
-            className="btn px-8 py-3 font-semibold rounded-xl  text-white"
-          >
-            Back to homepage
-          </Link>
+        </svg> */}
+
+      <div
+        class="card card-compact mx-auto
+         text-center bg-orange-100 shadow-xl"
+      >
+        <figure className="">
+          <img src={error} className="w-[60%] rounded-3xl" alt="" />
+        </figure>
+
+        <div class="card-body items-center">
+          <div className="max-w-md text-center">
+            <Link
+              to="/"
+              className="btn px-8 py-3 font-semibold rounded-xl  text-white"
+            >
+              Back to homepage
+            </Link>
+          </div>
         </div>
       </div>
     </section>

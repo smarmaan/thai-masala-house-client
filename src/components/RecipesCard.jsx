@@ -21,12 +21,9 @@ const RecipesCard = ({ recipe }) => {
   };
 
   return (
-    <div className="card w-96 bg-orange-200 shadow-xl mx-auto">
-      <figure>
-        <img
-          src={image}
-          alt=""
-        />
+    <div className="card w-96  bg-orange-200 shadow-xl mx-auto">
+      <figure className="w-full h-96 px-1">
+        <img src={image} className="rounded-3xl" alt="" />
       </figure>
       <div className="card-body">
         <h2
@@ -47,7 +44,7 @@ const RecipesCard = ({ recipe }) => {
         ) : (
           <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
             <span className="text-xl font-bold underline block">
-              Preparation:
+            Cooking method:
             </span>
             <br />
             {preparation.slice(0, 250)}...{" "}
@@ -73,7 +70,7 @@ const RecipesCard = ({ recipe }) => {
             className="btn btn-xs w-24 text-black hover:text-white bg-orange-200 hover:bg-orange-400  border-0 shadow-xl"
           >
             {" "}
-            See More
+            More
           </Link>{" "}
         </div>
 
@@ -84,7 +81,7 @@ const RecipesCard = ({ recipe }) => {
         <div className="card-actions justify-end">
           <Link to={`/recipes/${id}`}>
             <button className="btn text-black font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0">
-              See More
+              All Details
             </button>
           </Link>
           <button

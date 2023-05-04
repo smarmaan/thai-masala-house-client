@@ -60,7 +60,7 @@ const Recipes = () => {
 
           <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
             <span className="text-xl font-bold underline block">
-              Preparation:
+            Cooking method
             </span>{" "}
             <br />
             {preparation}
