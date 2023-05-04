@@ -15,7 +15,7 @@ const Header = () => {
         width={`100%`}
         threshold={0.95}
         onContentVisible={() => {
-          console.log("Banner loaded!");
+          console.log("Banner loaded! with Lazy Loader...");
         }}
       >
         <figure className="rounded-3xl ">

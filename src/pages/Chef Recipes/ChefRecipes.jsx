@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import RecipesCard from "../../components/RecipesCard";
+import LazyLoad from "react-lazy-load";
 
 const ChefRecipes = () => {
   const { id } = useParams();
@@ -39,7 +40,21 @@ const ChefRecipes = () => {
 
       <div className="hero bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={picture} className="max-w-sm rounded-lg shadow-2xl" />
+          {/* <img src={picture} className="max-w-sm rounded-lg shadow-2xl" /> */}
+
+          <LazyLoad
+            height={`100%`}
+            width={`100%`}
+            threshold={0.95}
+            onContentVisible={() => {
+              console.log("Chef Banner loaded! with lazy loader");
+            }}
+          >
+            <figure className="max-w-sm rounded-xl shadow-2xl">
+              <img src={picture} className="max-w-sm rounded-xl shadow-2xl" />
+            </figure>
+          </LazyLoad>
+
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-2">short bio/description</p>
