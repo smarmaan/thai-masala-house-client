@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HomeChefCards from "../../../components/HomeChefCards";
 import Header from "../../Shared/Header/Header";
 import TimeMarquee from "../../Shared/Time Marquee/TimeMarquee";
+import Statistics from "../../../components/Statistics";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -27,6 +28,10 @@ const Home = () => {
         {chefs.map((chef) => (
           <HomeChefCards key={chef.id} chef={chef}></HomeChefCards>
         ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <Statistics></Statistics>
       </div>
     </div>
   );

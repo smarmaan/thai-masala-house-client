@@ -5,7 +5,15 @@ import { Link } from "react-router-dom";
 const HomeChefCards = ({ chef }) => {
   //   console.log(chef);
 
-  const { id, name, picture, yearsOfExperience, numberOfRecipes, likes } = chef;
+  const {
+    id,
+    name,
+    picture,
+    yearsOfExperience,
+    numberOfRecipes,
+    likes,
+    ratings,
+  } = chef;
 
   //   console.log(id, name, picture, yearsOfExperience, numberOfRecipes, likes);
 
@@ -33,6 +41,7 @@ const HomeChefCards = ({ chef }) => {
         <p>years Of Experience :{yearsOfExperience}</p>
         <p>number Of Recipes:{numberOfRecipes}</p>
         <p>likes : {likes}</p>
+        <p>ratings : {ratings}</p>
         <div className="card-actions">
           <Link to={`/chef/${chef.id}`}>
             <button className="btn btn-primary">View Recipes</button>
