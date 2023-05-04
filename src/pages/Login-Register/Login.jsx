@@ -66,7 +66,9 @@ const Login = () => {
       {/* min-h-screen  */}
       <div className="hero-content mx-auto flex-col py-16">
         <div className="text-center my-2">
-          <h1 className="text-5xl font-bold">Login...!!</h1>
+          <h1 className="text-4xl font-bold font-serif bg-orange-300 rounded-3xl px-6 py-3 shadow-xl ">
+            Please Login !!
+          </h1>
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-orange-50">
           <form onSubmit={handleLogin} className="card-body">
@@ -164,7 +166,7 @@ const Login = () => {
 
             <p className="text-xl font-bold text-center">
               New to this website..? <br /> Please{" "}
-              <span className="mx-0">
+              <span className="">
                 <Link
                   to="/register"
                   className="btn btn-sm my-5 mx-3 text-black hover:text-white bg-orange-200 hover:bg-orange-400  border-0 shadow-xl"
