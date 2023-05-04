@@ -17,9 +17,9 @@ import { Link } from "react-router-dom";
 
 const TimeMarquee = () => {
   return (
-    <div className="card h-56 bg-orange-400 mx-auto my-10 text-gray-800">
+    <div className="card h-56 bg-orange-200 mx-auto my-16 text-gray-800">
       <div className="card-body items-center text-center">
-        <h1 className="text-center text-2xl md:text-4xl font-sans font-extrabold ">
+        <h1 className="text-center text-2xl md:text-4xl font-serif font-extrabold ">
           {" "}
           {moment().format("dddd, MMMM Do YYYY ")}{" "}
         </h1>
@@ -52,7 +52,7 @@ const TimeMarquee = () => {
       </div>
 
       <Marquee
-        className="font-bold py-3  rounded-b-2xl bg-[#f5b04c]"
+        className="font-bold py-6  rounded-b-2xl bg-[#f5b04c]"
         speed={90}
       >
         <p className=" text-xl md:text-2xl  mx-10 ">Contact us with.... </p>

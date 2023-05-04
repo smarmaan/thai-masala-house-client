@@ -22,12 +22,21 @@ const Home = () => {
 
       <TimeMarquee></TimeMarquee>
 
-      <h1 className="mt-24 text-center "> All chefs Data </h1>
+      <div className="">
+        <div className="card w-[50%] mx-auto bg-orange-200 font-serif">
+          <div className="card-body items-center text-center">
+            {/* <h2 className="card-title font-bold text-3xl"></h2> */}
+            <p className="font-bold text-3xl">
+              "The Culinary Artist: A Title for All Chefs"
+            </p>
+          </div>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20 justify-center items-center mx-auto">
-        {chefs.map((chef) => (
-          <HomeChefCards key={chef.id} chef={chef}></HomeChefCards>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-20 justify-center items-center mx-auto">
+          {chefs.map((chef) => (
+            <HomeChefCards key={chef.id} chef={chef}></HomeChefCards>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2">
