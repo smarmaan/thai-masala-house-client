@@ -30,7 +30,7 @@ If the user name is available, the user's name will be visible when the mouse ho
 
 
 
-								4
+								4 (Complete)
 
 Create a reasonable and meaningful footer.  Make sure that the navbar and footer are present on all pages:
 

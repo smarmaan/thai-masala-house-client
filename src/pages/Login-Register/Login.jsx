@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../providers/AuthProvider";
 
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaArrowRight, FaEye, FaEyeSlash } from "react-icons/fa";
 
 import google from "../../../public/search.png";
 
@@ -48,7 +48,7 @@ const Login = () => {
       .catch((error) => {
         console.log(error.message);
         setError(error.message);
-        
+
         return;
       });
   };
@@ -62,17 +62,19 @@ const Login = () => {
   console.log(error);
   // console.log(success);
   return (
-    <div className="hero min-h-screen bg-base-200 rounded-3xl my-6">
+    <div className="bg-orange-200 rounded-3xl my-24">
       {/* min-h-screen  */}
-      <div className="hero-content flex-col ">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login</h1>
+      <div className="hero-content mx-auto flex-col py-16">
+        <div className="text-center my-2">
+          <h1 className="text-5xl font-bold">Login...!!</h1>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-orange-50">
           <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email address</span>
+                <span className="label-text text-xl font-bold my-1">
+                  Email address
+                </span>
               </label>
               <input
                 type="email"
@@ -85,7 +87,9 @@ const Login = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text text-xl font-bold my-1">
+                  Password
+                </span>
               </label>
               <input
                 type={passwordType}
@@ -97,19 +101,22 @@ const Login = () => {
               />
               <div className="my-2" onClick={togglePassword}>
                 {passwordType === "password" ? (
-                  <div className="flex items-center gap-2 justify-end cursor-pointer">
+                  <div className="flex font-bold items-center gap-2 justify-end cursor-pointer">
                     <FaEye></FaEye>
-                    Show PassWord
+                    Show Password
                   </div>
                 ) : (
-                  <div className="flex items-center gap-2 justify-end cursor-pointer">
+                  <div className="flex font-bold items-center gap-2 justify-end cursor-pointer">
                     <FaEyeSlash />
-                    Hide PassWord
+                    Hide Password
                   </div>
                 )}
               </div>
               <label className="label">
-                <Link to="/register" className="label-text-alt link link-hover">
+                <Link
+                  to=""
+                  className="label-text-alt link link-hover text-xl font-bold my-1"
+                >
                   Forgot password?
                 </Link>
               </label>
@@ -125,16 +132,17 @@ const Login = () => {
             </div> */}
 
             <div className="form-control">
-              <button className="btn btn-sm text-black hover:text-white bg-orange-200 hover:bg-orange-400 ">
+              <button className="btn text-black border-0 shadow-xl hover:text-white normal-case text-xl font-bold  bg-orange-200 hover:bg-orange-400 ">
                 Login
               </button>
             </div>
 
-            <div className="flex items-center justify-center gap-3 my-3">
+            <div className="flex items-center justify-center gap-3 my-5">
               <div className="form-control">
                 <Link
                   onClick={handleGoogleSignIn}
-                  className="btn btn-sm bg-orange-200 hover:bg-orange-400 "
+                  className="btn btn-sm bg-orange-200 hover:bg-orange-400 border-0 shadow-xl"
+                  to="/"
                 >
                   <img className="w-5" src={google} alt="" />
                 </Link>
@@ -142,7 +150,8 @@ const Login = () => {
               <div className="form-control">
                 <Link
                   onClick={handleGitHubSignIn}
-                  className="btn btn-sm  bg-orange-200 hover:bg-orange-400"
+                  className="btn btn-sm  bg-orange-200 hover:bg-orange-400 border-0 shadow-xl"
+                  to="/"
                 >
                   <img
                     className="w-5 bg-white rounded-full"
@@ -153,12 +162,12 @@ const Login = () => {
               </div>
             </div>
 
-            <p>
-              New to EMA-JHON?{" "}
-              <span>
+            <p className="text-xl font-bold text-center">
+              New to this website..? <br /> Please{" "}
+              <span className="mx-0">
                 <Link
                   to="/register"
-                  className="btn btn-xs  text-black hover:text-white bg-orange-200 hover:bg-orange-400 "
+                  className="btn btn-sm my-5 mx-3 text-black hover:text-white bg-orange-200 hover:bg-orange-400  border-0 shadow-xl"
                 >
                   Register
                 </Link>
