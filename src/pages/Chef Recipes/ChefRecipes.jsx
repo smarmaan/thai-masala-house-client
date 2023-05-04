@@ -26,11 +26,12 @@ const ChefRecipes = () => {
   const yearsOfExperience = findID?.yearsOfExperience;
   const numberOfRecipes = findID?.numberOfRecipes;
   const likes = findID?.likes;
-  // console.log(name, picture, yearsOfExperience, numberOfRecipes, likes);
+  const description = findID?.description;
+  // console.log(name, picture, yearsOfExperience, numberOfRecipes, likes,description);
 
   return (
     <div>
-      <p>ChefRecipes : {chefRecipes.length}</p>
+      <p>Total Recipes : {chefRecipes.length}</p>
 
       {/* 
 
@@ -57,10 +58,10 @@ const ChefRecipes = () => {
 
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
-            <p className="py-2">short bio/description</p>
             <p className="py-2">{yearsOfExperience}</p>
             <p className="py-2">{numberOfRecipes}</p>
             <p className="py-2">{likes}</p>
+            <p className="py-2">{description}</p>
           </div>
         </div>
       </div>

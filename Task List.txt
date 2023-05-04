@@ -104,7 +104,8 @@ The home page will have a Chef section with at least six cards. Each card will h
 
 		# marquee...............(Complete)
 		
-		# statistics...........................
+		# statistics...........................(Complete)
+		
 
 
 
@@ -134,7 +135,7 @@ Think about a section displaying the information of the selected chef's recipes 
 the recipe name...........................(Done...)
 ingredients (at least 5)...........................(Done...)
 cooking method...........................(Done...)
-rating.....................................................................////////////////
+rating...............................(Done...)
 Favorite button. ...........................(Done...)
 
 
@@ -144,21 +145,49 @@ Favorite button. ...........................(Done...)
 
 1. When clicking the Favorite button, show a toast message showing the recipe is your favorite and disable the button.......................... (Done...)
 
-2. Show a spinner when the data is in a loading state ............................... (Done...)
+2. Show a spinner when the data is in a loading state ........ (Done...)
 
-2. Create a 404 page. Add a picture on the 404 page............................. 
+2. Create a 404 page. Add a picture on the 404 page............. (Done...)
 
-3. Use the Environment variable to hide the Firebase config keys. .............................................. (Done...)
+3. Use the Environment variable to hide the Firebase config keys. .................... (Done...)
 
-4. Add "active route" to indicate the route which you are visiting............................................... (Done...)
+4. Add "active route" to indicate the route which you are visiting............... (Done...)
 
 
 ## **Bonus**
-1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository................................................ (Done...)
+1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository................. (Done...)
+
+
+
+
+
+
+
+
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
+
 
 2. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here. 
 
-3. Make your website home page mobile & desktop responsive (tablet responsive is optional) ............................................... (Done...)
+
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
+
+
+3. Make your website home page mobile & desktop responsive (tablet responsive is optional) ............... (Done...)
+
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
 
 4. Create a `blogs` page route where you will have to answer the following questions 
 
@@ -171,12 +200,38 @@ Favorite button. ...........................(Done...)
     4. What is a custom hook, and why will you create a custom hook?
 
 
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
+
+
+
 5. The Chef Recipe page will be a private/protected page. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route....................... (Done...)
 
 6. Apply lazy load to the chef picture either on the banner of `Chef Recipes` or on the chef pictures of the six cards on the Homepage.............. (Done...)
 
 
+
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
+
+
 7. FUN: The blog page, Create a heading and add an icon/ button. When you click on that button, it will create a pdf and will be downloaded ( This will give you some fun. Try out this after completing all of your tasks. Hint: Explore `react-to-pdf` package). Your pdf should contain some information about the blog page.
+
+
+
+{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
+
+
+
+
+
+
 
 8. Make sure your site looks reasonable. The design and color selection is meaningful................................. (Done...)
 
