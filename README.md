@@ -1,6 +1,6 @@
 # 🤩🤩**THAI MASALA House** 🤩🤩
 
-**This website represents a Food's  Website... It's an online platform that connects food lover and passionate toward cooking. we share the platform with the best chef in the world and serve the best Thai food you can ever have .**
+**This website represents a Food's Website... It's an online platform that connects food lover and passionate toward cooking. we share the platform with the best chef in the world and serve the best Thai food you can ever have .**
 
 ## 🤔🤔 **Features of this website:--** 🤔🤔
 
@@ -20,3 +20,5 @@ All the requirements + Bonus tasks were checked... GOOD TO GO FOR --- **60/60**
 You can access the website at <https://thai-masala-house.web.app/>
 
 You can access the data api at <https://thai-masala-house-server-smarmaan.vercel.app/>
+
+server-side repo link: <https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-smarmaan/>

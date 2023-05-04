@@ -10,41 +10,6 @@ const Recipes = () => {
 
   return (
     <>
-      {/* <div className="card w-[40%] bg-orange-200 shadow-xl mx-auto my-16">
-        <div className="card-body"> */}
-          {/* <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
-            <span className="text-xl font-bold underline block">
-              Preparation:
-            </span>{" "}
-            <br />
-            {preparation}
-          </div> */}
-
-          {/* <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
-            <span className="text-xl font-bold underline block mb-4">
-              Ingredients:
-            </span>
-
-            {ingredients.map((ingredient, index) => (
-              <p key={index}> {ingredient} </p>
-            ))}
-          </div> */}
-
-          {/* <p className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
-            Ratings : {ratings}
-          </p>
-
-          <div className="card-actions justify-end">
-            <Link to={`/chef/${chef_id}`}>
-              {" "}
-              <button className="btn text-black font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0">
-                Back
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div> */}
-      {/* ================================================================================================================== */}
       <div className="card lg:card-side bg-orange-200 shadow-xl my-16">
         <figure className="h-96 w-full my-auto rounded-3xl mx-16">
           <img src={image} alt="Album" className="rounded-3xl" />
@@ -82,7 +47,6 @@ const Recipes = () => {
 
           <div className="card-actions justify-end">
             <Link to={`/chef/${chef_id}`}>
-              {" "}
               <button className="btn text-black font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0">
                 Back
               </button>

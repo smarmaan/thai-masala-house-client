@@ -9,6 +9,7 @@ const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
 
   // const { displayName, photoURL } = user;
+
   const displayName = user?.displayName;
   const photoURL = user?.photoURL;
 
@@ -78,15 +79,6 @@ const Navbar = () => {
             >
               Blog
             </NavLink>
-
-            {/* 
-            <li>
-              <Link to="/all-recipes"> Chef Recipes</Link>
-            </li>
-
-            <li>
-              <Link to="blog">Blog</Link>
-            </li> */}
           </ul>
         </div>
         <p className="btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0 text-xl">
@@ -131,18 +123,6 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        {/* {user && (
-          <div>
-            <img className="w-10 h-10 rounded-full mx-3" src={pro} alt="" />
-          </div>
-        )} */}
-
-        {/* {user && (
-          <div>
-            <FaUserCircle className=" text-2xl md:text-4xl"></FaUserCircle>
-          </div>
-        )} */}
-
         {user?.photoURL && (
           <div>
             <img

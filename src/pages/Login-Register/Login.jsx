@@ -144,16 +144,7 @@ const Login = () => {
                 </Link>
               </label>
             </div>
-            {/* <div className="form-control">
-              <button className="btn btn-sm btn-primary">Login</button>
-            </div>
-            <div className="form-control">
-              <button className="btn btn-sm btn-primary">Google</button>
-            </div>
-            <div className="form-control">
-              <button className="btn btn-sm btn-primary">Github</button>
-            </div> */}
-
+            
             <div className="form-control">
               <button className="btn text-black border-0 shadow-xl hover:text-white normal-case text-xl font-bold  bg-orange-200 hover:bg-orange-400 ">
                 Login

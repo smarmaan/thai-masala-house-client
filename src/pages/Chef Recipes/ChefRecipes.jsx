@@ -20,14 +20,13 @@ const ChefRecipes = () => {
   const findID = chefs.find((chef) => chef.id == id);
   // console.log(findID);
 
-  // id, name, picture, yearsOfExperience, numberOfRecipes, likes
-
   const name = findID?.name;
   const picture = findID?.picture;
   const yearsOfExperience = findID?.yearsOfExperience;
   const numberOfRecipes = findID?.numberOfRecipes;
   const likes = findID?.likes;
   const description = findID?.description;
+  
   // console.log(name, picture, yearsOfExperience, numberOfRecipes, likes,description);
 
   return (

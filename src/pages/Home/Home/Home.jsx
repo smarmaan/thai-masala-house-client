@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import HomeChefCards from "../../../components/HomeChefCards";
 import Header from "../../Shared/Header/Header";
 import TimeMarquee from "../../Shared/Time Marquee/TimeMarquee";
@@ -25,7 +24,6 @@ const Home = () => {
       <div className="">
         <div className="card w-[50%] mx-auto bg-orange-200 font-serif">
           <div className="card-body items-center text-center">
-            {/* <h2 className="card-title font-bold text-3xl"></h2> */}
             <p className="font-bold text-3xl">
               "The Culinary Artist: A Title for All Chefs"
             </p>
