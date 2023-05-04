@@ -10,7 +10,7 @@ const HomeChefCards = ({ chef }) => {
   //   console.log(id, name, picture, yearsOfExperience, numberOfRecipes, likes);
 
   return (
-    <div className="card w-96 h-full bg-orange-200 hover:bg-orange-300 shadow-xl my-10 mx-auto">
+    <div className="card bg-orange-200 hover:bg-orange-300 shadow-xl my-10 mx-auto">
       <LazyLoad
         height={`100%`}
         width={`100%`}
@@ -19,12 +19,12 @@ const HomeChefCards = ({ chef }) => {
           console.log("Chef Picture loaded! with lazy loader");
         }}
       >
-        <figure className="px-10 pt-10">
-          <img src={picture} alt="" className="rounded-xl" />
+        <figure className="px-10 pt-10 w-96 h-96 mx-auto">
+          <img src={picture} alt="" className="rounded-xl shadow-2xl" />
         </figure>
       </LazyLoad>
 
-      <div className="card-body items-center text-center">
+      <div className="card card-body items-center text-center">
         <h2 className="card-title font-bold text-2xl  bg-orange-300 rounded-3xl px-6 py-3 my-5 shadow-2xl">
           Name: {name}
         </h2>
