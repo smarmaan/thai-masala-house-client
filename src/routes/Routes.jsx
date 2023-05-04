@@ -8,12 +8,13 @@ import Blog from "../pages/Blog/Blog";
 import Login from "../pages/Login-Register/Login";
 import Register from "../pages/Login-Register/Register";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    // errorElement: <div> 404</div>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
