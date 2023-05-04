@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import RecipesCard from "../../components/RecipesCard";
 import LazyLoad from "react-lazy-load";
+import { FaThumbsUp } from "react-icons/fa";
 
 const ChefRecipes = () => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const ChefRecipes = () => {
   }, []);
 
   const findID = chefs.find((chef) => chef.id == id);
-  console.log(findID);
+  // console.log(findID);
 
   // id, name, picture, yearsOfExperience, numberOfRecipes, likes
 
@@ -31,52 +32,66 @@ const ChefRecipes = () => {
 
   return (
     <div>
-      <p>Total Recipes : {chefRecipes.length}</p>
-
       {/* 
 
 
 
  */}
 
-      <div className="hero bg-base-200">
-        <div className="hero-content flex-col lg:flex-row">
-          {/* <img src={picture} className="max-w-sm rounded-lg shadow-2xl" /> */}
+      {findID && (
+        <div className=" bg-orange-200 p-5 rounded-3xl my-16">
+          <div className="hero-content flex-col lg:flex-row">
+            {/* <img src={picture} className="max-w-sm rounded-lg shadow-2xl" /> */}
 
-          <LazyLoad
-            height={`100%`}
-            width={`100%`}
-            threshold={0.95}
-            onContentVisible={() => {
-              console.log("Chef Banner loaded! with lazy loader");
-            }}
-          >
-            <figure className="max-w-sm rounded-xl shadow-2xl">
-              <img src={picture} className="max-w-sm rounded-xl shadow-2xl" />
-            </figure>
-          </LazyLoad>
+            <LazyLoad
+              height={`100%`}
+              width={`100%`}
+              threshold={0.95}
+              onContentVisible={() => {
+                console.log("Chef Banner loaded! with lazy loader");
+              }}
+            >
+              <figure className=" rounded-xl shadow-2xl">
+                <img src={picture} className=" rounded-xl shadow-2xl" />
+              </figure>
+            </LazyLoad>
 
-          <div>
-            <h1 className="text-5xl font-bold">{name}</h1>
-            <p className="py-2">{yearsOfExperience}</p>
-            <p className="py-2">{numberOfRecipes}</p>
-            <p className="py-2">{likes}</p>
-            <p className="py-2">{description}</p>
+            <div className="mx-16">
+              <h1 className="text-5xl font-bold mb-5 font-serif">{name}</h1>
+              <p className="py-2 font-medium text-lg">{description}</p>
+              <p className="py-2 font-medium text-lg">
+                Years of Experience : {yearsOfExperience}
+              </p>
+              <p className="py-2 font-medium text-lg">
+                Number of Recipes : {numberOfRecipes}
+              </p>
+              <p className="py-2  font-medium text-lg ">Likes : {likes} </p>
+            </div>
           </div>
+        </div>
+      )}
+
+      {/* 
+
+
+
+
+
+ */}
+
+      <div className="card w-96 bg-orange-200 text-center mx-auto">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title text-2xl font-bold">
+            Amount of Total Recipes : {chefRecipes.length}
+          </h2>
         </div>
       </div>
 
-      {/* 
-
-
-
-
-
- */}
-
-      {chefRecipes.map((recipe) => (
-        <RecipesCard key={recipe.id} recipe={recipe} />
-      ))}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 my-16 mx-auto">
+        {chefRecipes.map((recipe) => (
+          <RecipesCard key={recipe.id} recipe={recipe} />
+        ))}
+      </div>
     </div>
   );
 };

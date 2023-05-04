@@ -100,7 +100,7 @@ The home page will have a Chef section with at least six cards. Each card will h
 
 
 
-								10
+								10 (Complete)
 
  Add at least **two** extra sections on the home page. Make sure the sections are meaningful for the website you are building....
 
