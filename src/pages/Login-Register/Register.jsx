@@ -33,13 +33,17 @@ const Register = () => {
         setSuccess(
           <p className="text-center">
             "Registration Successful... <br /> Please visit{" "}
-            <Link className="btn btn-xs " to="/login">
+            <Link
+              className="btn btn-sm m3 text-black hover:text-white bg-orange-200 hover:bg-orange-400  border-0 shadow-xl"
+              to="/login"
+            >
               Login
             </Link>{" "}
             page... "
           </p>
         );
 
+        form.reset();
         updateUserData(result.user, name, photo);
       })
       .catch((error) => {
