@@ -81,10 +81,10 @@ export const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
-      // {
-      //   path: "*",
-      //   element: <div> 404 no found</div>,
-      // },
+      {
+        path: "*",
+        element: <ErrorPage />,
+      },
     ],
   },
 ]);
