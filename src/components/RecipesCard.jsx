@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const RecipesCard = ({ recipe }) => {
   // console.log(recipe);
@@ -10,6 +11,13 @@ const RecipesCard = ({ recipe }) => {
 
   const handleFavoriteClick = () => {
     setIsFavorite(true);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Recipe has been saved into favorite list",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
