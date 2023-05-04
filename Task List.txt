@@ -162,29 +162,7 @@ Favorite button. ...........................(Done...)
 ## **Bonus**
 1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository................. (Done...)
 
-
-
-
-
-
-
-
-
-
-{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
-
-
-
-
-2. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here. 
-
-
-
-
-{++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++}
-
-
-
+2. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here......... (Done...)
 
 3. Make your website home page mobile & desktop responsive (tablet responsive is optional) ............... (Done...)
 
