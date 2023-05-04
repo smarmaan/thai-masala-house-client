@@ -10,11 +10,7 @@ const HomeChefCards = ({ chef }) => {
   //   console.log(id, name, picture, yearsOfExperience, numberOfRecipes, likes);
 
   return (
-    <div className="card w-96 h-full bg-orange-400 shadow-xl my-10 mx-auto">
-      {/* <figure className="px-10 pt-10">
-        <img src={picture} alt="Shoes" className="rounded-xl" />
-      </figure> */}
-
+    <div className="card w-96 h-full bg-orange-200 hover:bg-orange-300 shadow-xl my-10 mx-auto">
       <LazyLoad
         height={`100%`}
         width={`100%`}
@@ -24,18 +20,26 @@ const HomeChefCards = ({ chef }) => {
         }}
       >
         <figure className="px-10 pt-10">
-          <img src={picture} alt="Shoes" className="rounded-xl w-[100%]" />
+          <img src={picture} alt="" className="rounded-xl" />
         </figure>
       </LazyLoad>
 
       <div className="card-body items-center text-center">
-        <h2 className="card-title">name: {name}</h2>
-        <p>years Of Experience :{yearsOfExperience}</p>
-        <p>number Of Recipes:{numberOfRecipes}</p>
-        <p>likes : {likes}</p>
-        <div className="card-actions">
+        <h2 className="card-title font-bold text-2xl  bg-orange-300 rounded-3xl px-6 py-3 my-5 shadow-2xl">
+          Name: {name}
+        </h2>
+
+        <div className="text-center text-lg font-semibold bg-orange-300 rounded-3xl px-10 py-3 my-5 shadow-2xl">
+          <p className="">Years of Experience: {yearsOfExperience}</p>
+          <p className="">Number of Recipes: {numberOfRecipes}</p>
+          <p className="">Likes : {likes}</p>
+        </div>
+
+        <div className="card-actions ">
           <Link to={`/chef/${chef.id}`}>
-            <button className="btn btn-primary">View Recipes</button>
+            <button className="btn text-black border-0 shadow-xl hover:text-white normal-case text-xl font-bold  bg-orange-300 hover:bg-orange-400 ">
+              View Recipes
+            </button>
           </Link>
         </div>
       </div>

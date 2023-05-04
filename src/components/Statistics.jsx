@@ -88,9 +88,16 @@ const Statistics = () => {
       <div className="text-center">
         <h1 className="font-bold text-xl mb-10">Chef Statistics Data</h1>
 
-        <p className="text-lg font-medium">
+        <p className="text-lg font-medium mb-10">
           Radar Chart created based on the chef statistics data ... counting
-          there like ratings years of experience and so on...
+          there likes, ratings, years of experience, number Of Recipes and so
+          on...
+        </p>
+
+        <p className="text-lg font-medium mb-10">
+          As per the chef statistics The red part indicates the number of Likes
+          have gotten by the chefs. Besides this, the Tooltip shows us the
+          actual data of other fields...
         </p>
       </div>
 
@@ -101,14 +108,14 @@ const Statistics = () => {
             <PolarAngleAxis dataKey="chefName" />
             <PolarRadiusAxis angle={20} />
             <Radar
-              name="years Of Experience"
+              name="Years of Experience"
               dataKey="yearsOfExperience"
               stroke="#31D8AB"
               fill="#31D8AB"
               fillOpacity={0.2}
             />
             <Radar
-              name="number Of Recipes"
+              name="Number of Recipes"
               dataKey="numberOfRecipes"
               stroke="#0084d8"
               fill="#0084d8"
@@ -116,7 +123,7 @@ const Statistics = () => {
               activeDot={{ r: 8 }}
             />
             <Radar
-              name="likes"
+              name="Likes"
               dataKey="likes"
               stroke="#dc2626"
               fill="#dc2626"
@@ -124,7 +131,7 @@ const Statistics = () => {
             />
             <Tooltip />
             <Radar
-              name="ratings"
+              name="Ratings"
               dataKey="ratings"
               stroke="#f5b04c"
               fill="#f5b04c"
