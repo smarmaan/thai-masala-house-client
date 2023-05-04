@@ -57,6 +57,27 @@ const Login = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
   };
 
+  const GoogleSignIn = () => {
+    handleGoogleSignIn()
+      .then((result) => {
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+  const GitHubSignIn = () => {
+    handleGitHubSignIn()
+      .then((result) => {
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
+      });
+  };
+
   console.log(user);
 
   console.log(error);
@@ -142,7 +163,7 @@ const Login = () => {
             <div className="flex items-center justify-center gap-3 my-5">
               <div className="form-control">
                 <Link
-                  onClick={handleGoogleSignIn}
+                  onClick={GoogleSignIn}
                   className="btn btn-sm bg-orange-200 hover:bg-orange-400 border-0 shadow-xl"
                   to="/"
                 >
@@ -151,7 +172,7 @@ const Login = () => {
               </div>
               <div className="form-control">
                 <Link
-                  onClick={handleGitHubSignIn}
+                  onClick={GitHubSignIn}
                   className="btn btn-sm  bg-orange-200 hover:bg-orange-400 border-0 shadow-xl"
                   to="/"
                 >
