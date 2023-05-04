@@ -23,9 +23,9 @@ const Navbar = () => {
   // console.log(displayName, photoURL);
 
   return (
-    <div className={`navbar bg-orange-400 rounded-3xl my-10`}>
+    <div className={`navbar bg-orange-200 rounded-3xl my-10`}>
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown ">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,11 +44,13 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content m-3 p-2 gap-3 shadow bg-orange-200 rounded-box w-52"
           >
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+                isActive
+                  ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0"
+                  : "btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0"
               }
               to="/"
             >
@@ -57,7 +59,9 @@ const Navbar = () => {
 
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+                isActive
+                  ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                  : "btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0"
               }
               to="/all-recipes"
             >
@@ -66,7 +70,9 @@ const Navbar = () => {
 
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+                isActive
+                  ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                  : "btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0"
               }
               to="/blog"
             >
@@ -83,15 +89,17 @@ const Navbar = () => {
             </li> */}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Thai Masala House</a>
+        <p className="btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0 text-xl">
+          Thai Masala House
+        </p>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex ">
+        <ul className="menu menu-horizontal px-1 gap-3">
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-[#f9a51a] bg-black btn"
-                : "text-black btn mx-2 bg-[#f9a51a]"
+                ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                : "btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0"
             }
             to="/"
           >
@@ -100,7 +108,9 @@ const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black  btn" : " btn"
+              isActive
+                ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                : "btn text-white font-bold  bg-[#f58d17bb]  hover:bg-[#bd6507] border-0"
             }
             to="/all-recipes"
           >
@@ -109,7 +119,9 @@ const Navbar = () => {
 
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+              isActive
+                ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                : "btn text-white font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0"
             }
             to="/blog"
           >
@@ -160,7 +172,9 @@ const Navbar = () => {
         {user ? (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+              isActive
+                ? "btn text-white font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0"
+                : "btn text-white font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0"
             }
             to="/"
             onClick={handleLogout}
@@ -170,7 +184,9 @@ const Navbar = () => {
         ) : (
           <NavLink
             className={({ isActive }) =>
-              isActive ? "text-[#F9A51A] bg-black btn" : " btn"
+              isActive
+                ? "btn text-[#F9A51A] font-bold bg-[#b62727d7] hover:bg-[#990e0e] border-0 "
+                : "btn text-white font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0"
             }
             to="/login"
           >
