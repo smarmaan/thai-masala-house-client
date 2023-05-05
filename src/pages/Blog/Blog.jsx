@@ -1,11 +1,23 @@
 import React, { useRef } from "react";
 import ReactToPrint from "react-to-print";
+import { FaFilePdf } from "react-icons/fa";
 
 const Blog = () => {
   const ref = useRef();
 
   return (
     <div>
+      <ReactToPrint
+        trigger={() => (
+          <div className="flex my-24">
+            <div className="btn-lg mx-auto btn text-white text-3xl font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0">
+              <FaFilePdf className="mr-2 text-4xl" /> Print
+            </div>
+          </div>
+        )}
+        content={() => ref.current}
+      />
+
       <div ref={ref}>
         <header className="m-2 sm:m-5 md:m-10 ">
           <div className=" bg-orange-100 font-serif rounded-3xl drop-shadow-2xl p-5">
@@ -51,7 +63,8 @@ const Blog = () => {
               interactions. However, they can also be more verbose and require
               more code to set up. Uncontrolled components, on the other hand,
               are simpler and require less code, but they can be harder to
-              control and can lead to unexpected behavior.  <br /> <br /> --------------------
+              control and can lead to unexpected behavior. <br /> <br />{" "}
+              --------------------
               <strong className="font-bold text-lg text-red-800"></strong>
             </p>
           </section>
@@ -189,7 +202,7 @@ const Blog = () => {
         </main>
       </div>
 
-      <ReactToPrint
+      {/* <ReactToPrint
         trigger={() => (
           <div className="flex my-24">
             <div className="btn-lg mx-auto btn text-white font-bold  bg-[#f58d17bb] hover:bg-[#bd6507] border-0">
@@ -198,7 +211,7 @@ const Blog = () => {
           </div>
         )}
         content={() => ref.current}
-      />
+      /> */}
     </div>
   );
 };

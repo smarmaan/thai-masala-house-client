@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const RecipesCard = ({ recipe }) => {
   // console.log(recipe);
@@ -73,8 +75,16 @@ const RecipesCard = ({ recipe }) => {
           </Link>
         </div>
 
-        <p className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
-          Ratings : {ratings}
+        <p className="flex gap-2 items-center  font-medium bg-orange-300 px-3 py-3 rounded-3xl">
+          Ratings :
+          <Rating
+            placeholderRating={ratings}
+            readonly
+            emptySymbol={<FaRegStar></FaRegStar>}
+            placeholderSymbol={<FaStar className=""></FaStar>}
+            fullSymbol={<FaStar></FaStar>}
+          />
+          {ratings}
         </p>
 
         <div className="card-actions justify-end">

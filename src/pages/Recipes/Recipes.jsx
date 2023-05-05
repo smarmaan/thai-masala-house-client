@@ -1,5 +1,7 @@
 import React from "react";
+import Rating from "react-rating";
 import { Link, useLoaderData } from "react-router-dom";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const Recipes = () => {
   const recipes = useLoaderData();
@@ -41,8 +43,16 @@ const Recipes = () => {
             ))}
           </div>
 
-          <p className="font-medium bg-orange-300 p-3 md:p-5 rounded-3xl">
-            Ratings : {ratings}
+          <p className="flex gap-2 items-center  font-medium bg-orange-300 p-3 md:p-5 rounded-3xl">
+            Ratings :
+            <Rating
+              placeholderRating={ratings}
+              readonly
+              emptySymbol={<FaRegStar></FaRegStar>}
+              placeholderSymbol={<FaStar className=""></FaStar>}
+              fullSymbol={<FaStar></FaStar>}
+            />
+            {ratings}
           </p>
 
           <div className="card-actions justify-end">
