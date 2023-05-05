@@ -84,8 +84,8 @@ const Statistics = () => {
   ];
 
   return (
-    <div>
-      <div className="text-center">
+    <div className="bg-orange-100 rounded-3xl p-10 my-16 shadow-2xl">
+      <div className="text-center bg-orange-200 rounded-3xl px-3 pt-5 pb-1 shadow-2xl">
         <h1 className="font-bold text-xl mb-10">Chef Statistics Data</h1>
 
         <p className="text-lg font-medium mb-10">
