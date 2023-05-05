@@ -39,7 +39,7 @@ const Recipes = () => {
             </span>
 
             {ingredients.map((ingredient, index) => (
-              <p key={index}> {ingredient} </p>
+              <li key={index}> {ingredient} </li>
             ))}
           </div>
 

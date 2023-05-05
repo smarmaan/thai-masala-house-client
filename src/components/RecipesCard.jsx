@@ -65,7 +65,7 @@ const RecipesCard = ({ recipe }) => {
             Ingredients:
           </span>
           {ingredients.slice(0, 5).map((ingredient, index) => (
-            <p key={index}> {ingredient} </p>
+            <li key={index}> {ingredient} </li>
           ))}
           <Link
             to={`/recipes/${id}`}
