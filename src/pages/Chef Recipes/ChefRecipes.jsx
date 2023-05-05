@@ -26,7 +26,7 @@ const ChefRecipes = () => {
   const numberOfRecipes = findID?.numberOfRecipes;
   const likes = findID?.likes;
   const description = findID?.description;
-  
+
   // console.log(name, picture, yearsOfExperience, numberOfRecipes, likes,description);
 
   return (
@@ -38,8 +38,8 @@ const ChefRecipes = () => {
  */}
 
       {findID && (
-        <div className=" bg-orange-200 p-5 rounded-3xl my-16">
-          <div className="hero-content flex-col lg:flex-row">
+        <div className=" bg-orange-200 md:mx-36 p-6 rounded-3xl my-16">
+          <div className="hero-content mx-auto  flex-col lg:flex-row ">
             {/* <img src={picture} className="max-w-sm rounded-lg shadow-2xl" /> */}
 
             <LazyLoad
@@ -50,13 +50,18 @@ const ChefRecipes = () => {
                 console.log("Chef Banner loaded! with lazy loader");
               }}
             >
-              <figure className="h-96 w-96 rounded-xl shadow-2xl">
-                <img src={picture} className=" rounded-xl h-96 w-96 shadow-2xl" />
+              <figure className="h-full w-full rounded-xl shadow-2xl">
+                <img
+                  src={picture}
+                  className=" rounded-xl h-96 w-96 shadow-2xl"
+                />
               </figure>
             </LazyLoad>
 
-            <div className="ml-16 bg-orange-300 p-7 rounded-2xl shadow-2xl">
-              <h1 className="text-5xl font-bold mb-5 font-serif underline">{name}</h1>
+            <div className="mx-16  bg-orange-300 p-6 rounded-2xl shadow-2xl">
+              <h1 className="text-5xl font-bold mb-5 font-serif underline">
+                {name}
+              </h1>
               <p className="py-2 font-medium text-lg">{description}</p>
               <p className="py-2 font-medium text-lg">
                 Years of Experience : {yearsOfExperience}

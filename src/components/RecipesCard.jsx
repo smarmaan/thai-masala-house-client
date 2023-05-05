@@ -21,9 +21,9 @@ const RecipesCard = ({ recipe }) => {
   };
 
   return (
-    <div className="card w-96  bg-orange-200 shadow-xl mx-auto">
+    <div className="card w-96 bg-orange-200 shadow-xl mx-auto">
       <figure className="">
-        <img src={image} className="rounded-3xl w-full h-96" alt="" />
+        <img src={image} className="rounded w-full h-96" alt="" />
       </figure>
       <div className="card-body">
         <h2
@@ -44,7 +44,7 @@ const RecipesCard = ({ recipe }) => {
         ) : (
           <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
             <span className="text-xl font-bold underline block">
-            Cooking method:
+              Cooking method:
             </span>
             <br />
             {preparation.slice(0, 250)}...{" "}
@@ -69,7 +69,7 @@ const RecipesCard = ({ recipe }) => {
             to={`/recipes/${id}`}
             className="btn btn-xs w-24 text-black hover:text-white bg-orange-200 hover:bg-orange-400  border-0 shadow-xl"
           >
-           Load More
+            Load More
           </Link>
         </div>
 
