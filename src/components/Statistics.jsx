@@ -90,14 +90,9 @@ const Statistics = () => {
 
         <p className="text-lg font-medium mb-10">
           Radar Chart created based on the chef statistics data ... counting
-          there likes, ratings, years of experience, number Of Recipes and so
-          on...
-        </p>
-
-        <p className="text-lg font-medium mb-10">
-          As per the chef statistics The red part indicates the number of Likes
-          have gotten by the chefs. Besides this, the Tooltip shows us the
-          actual data of other fields...
+          their total likes.... The counting shows us the most popular chef is
+          David Thompson... Giving his best and getting the first position on
+          peoples heart....
         </p>
       </div>
 
@@ -107,36 +102,16 @@ const Statistics = () => {
             <PolarGrid />
             <PolarAngleAxis dataKey="chefName" />
             <PolarRadiusAxis angle={20} />
-            <Radar
-              name="Years of Experience"
-              dataKey="yearsOfExperience"
-              stroke="#31D8AB"
-              fill="#31D8AB"
-              fillOpacity={0.2}
-            />
-            <Radar
-              name="Number of Recipes"
-              dataKey="numberOfRecipes"
-              stroke="#0084d8"
-              fill="#0084d8"
-              fillOpacity={0.1}
-              activeDot={{ r: 8 }}
-            />
+
             <Radar
               name="Likes"
               dataKey="likes"
-              stroke="#dc2626"
-              fill="#dc2626"
+              stroke="#d13358"
+              fill="#d13358"
               fillOpacity={0.1}
             />
             <Tooltip />
-            <Radar
-              name="Ratings"
-              dataKey="ratings"
-              stroke="#f5b04c"
-              fill="#f5b04c"
-              fillOpacity={0.1}
-            />
+
             <Legend />
           </RadarChart>
         </ResponsiveContainer>

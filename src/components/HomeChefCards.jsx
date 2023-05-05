@@ -19,8 +19,8 @@ const HomeChefCards = ({ chef }) => {
           console.log("Chef Picture loaded! with lazy loader");
         }}
       >
-        <figure className="px-10 pt-10 w-96 h-96 mx-auto">
-          <img src={picture} alt="" className="rounded-xl shadow-2xl" />
+        <figure className="px-10  pt-10 mx-auto">
+          <img src={picture} alt="" className="rounded-xl w-96 h-96   shadow-2xl" />
         </figure>
       </LazyLoad>
 

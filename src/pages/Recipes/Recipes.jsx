@@ -11,8 +11,8 @@ const Recipes = () => {
   return (
     <>
       <div className="card lg:card-side bg-orange-200 shadow-xl my-16">
-        <figure className="h-96 w-full my-auto rounded-3xl mx-16">
-          <img src={image} alt="Album" className="rounded-3xl" />
+        <figure className="w-full h-full my-auto  rounded-3xl mx-16">
+          <img src={image} alt="Album" className="rounded-3xl h-full w-full " />
         </figure>
 
         <div className="card-body">
@@ -23,15 +23,15 @@ const Recipes = () => {
             {recipe_name}
           </h2>
 
-          <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
+          <div className="font-medium bg-orange-300 p-3 md:p-10  rounded-3xl">
             <span className="text-xl font-bold underline block">
-            Cooking method
+              Cooking method
             </span>{" "}
             <br />
             {preparation}
           </div>
 
-          <div className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
+          <div className="font-medium bg-orange-300  p-3 md:p-10  rounded-3xl">
             <span className="text-xl font-bold underline block mb-4">
               Ingredients:
             </span>
@@ -41,7 +41,7 @@ const Recipes = () => {
             ))}
           </div>
 
-          <p className="font-medium bg-orange-300 px-3 py-3 rounded-3xl">
+          <p className="font-medium bg-orange-300 p-3 md:p-5 rounded-3xl">
             Ratings : {ratings}
           </p>
 

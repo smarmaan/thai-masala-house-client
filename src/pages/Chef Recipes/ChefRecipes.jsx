@@ -50,13 +50,13 @@ const ChefRecipes = () => {
                 console.log("Chef Banner loaded! with lazy loader");
               }}
             >
-              <figure className=" rounded-xl shadow-2xl">
-                <img src={picture} className=" rounded-xl shadow-2xl" />
+              <figure className="h-96 w-96 rounded-xl shadow-2xl">
+                <img src={picture} className=" rounded-xl h-96 w-96 shadow-2xl" />
               </figure>
             </LazyLoad>
 
-            <div className="mx-16">
-              <h1 className="text-5xl font-bold mb-5 font-serif">{name}</h1>
+            <div className="ml-16 bg-orange-300 p-7 rounded-2xl shadow-2xl">
+              <h1 className="text-5xl font-bold mb-5 font-serif underline">{name}</h1>
               <p className="py-2 font-medium text-lg">{description}</p>
               <p className="py-2 font-medium text-lg">
                 Years of Experience : {yearsOfExperience}
