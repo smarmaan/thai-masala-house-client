@@ -50,55 +50,55 @@ const RecipesSlider = () => {
         >
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/XXbSjVX/Gaeng-Hang-Lae-Curry.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/kQ3pN56/Tom-Yum-Goong-Soup.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/hCJ9B3H/Pad-Thai-Noodles.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/ZXRCBLT/Tom-Yum-Soup.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/SwgzxKH/Laab-Gai.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/wK7B6Kz/Green-Papaya-Salad.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/d02N8Wh/Green-Curry-Chicken.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/tmKF3hX/Massaman-Beef-Curry.jpg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              className="h-56 w-full rounded-xl"
+              className="h-48 md:h-56 w-full rounded-xl"
               src="https://i.ibb.co/9TdGRDr/Mango-Sticky-Rice.jpg"
             />
           </SwiperSlide>

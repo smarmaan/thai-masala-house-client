@@ -25,7 +25,7 @@ const Home = () => {
       <div className="">
         <div className="card w-[50%] mx-auto bg-orange-200 font-serif">
           <div className="card-body items-center rounded-2xl text-center shadow-2xl">
-            <p className="font-bold text-3xl ">
+            <p className="font-bold md:text-3xl">
               "The Culinary Artist: A Title for All Chefs"
             </p>
           </div>
