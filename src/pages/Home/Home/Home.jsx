@@ -3,6 +3,7 @@ import HomeChefCards from "../../../components/HomeChefCards";
 import Header from "../../Shared/Header/Header";
 import TimeMarquee from "../../Shared/Time Marquee/TimeMarquee";
 import Statistics from "../../../components/Statistics";
+import RecipesSlider from "../../../components/RecipesSlider";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -23,8 +24,8 @@ const Home = () => {
 
       <div className="">
         <div className="card w-[50%] mx-auto bg-orange-200 font-serif">
-          <div className="card-body items-center text-center">
-            <p className="font-bold text-3xl">
+          <div className="card-body items-center rounded-2xl text-center shadow-2xl">
+            <p className="font-bold text-3xl ">
               "The Culinary Artist: A Title for All Chefs"
             </p>
           </div>
@@ -37,8 +38,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <Statistics></Statistics>
+        <RecipesSlider></RecipesSlider>
       </div>
     </div>
   );

@@ -85,8 +85,10 @@ const Statistics = () => {
 
   return (
     <div className="bg-orange-100 rounded-3xl p-10 my-16 shadow-2xl">
-      <div className="text-center bg-orange-200 rounded-3xl px-3 pt-5 pb-1 shadow-2xl">
-        <h1 className="font-bold text-xl mb-10">Chef Statistics Data</h1>
+      <div className="text-center font-serif bg-orange-200 rounded-3xl px-3 pt-5 pb-1 shadow-2xl">
+        <h1 className="font-bold text-3xl mb-10 underline ">
+          Chef Statistics Data
+        </h1>
 
         <p className="text-lg font-medium mb-10">
           Radar Chart created based on the chef statistics data ... counting
@@ -96,10 +98,14 @@ const Statistics = () => {
         </p>
       </div>
 
-      <div className="my-24">
-        <ResponsiveContainer width="100%" height={500}>
+      <div className="my-24 bg-orange-100 p-5 rounded-3xl font-serif font-bold text-black stroke-gray-400">
+        <ResponsiveContainer
+          width="100%"
+          height={500}
+          className="stroke-cyan-700"
+        >
           <RadarChart data={chefStatistics} cx="50%" cy="50%" outerRadius="90%">
-            <PolarGrid />
+            <PolarGrid className="stroke-orange-700" />
             <PolarAngleAxis dataKey="chefName" />
             <PolarRadiusAxis angle={20} />
 
@@ -115,6 +121,12 @@ const Statistics = () => {
             <Legend />
           </RadarChart>
         </ResponsiveContainer>
+      </div>
+
+      <div className="text-center font-serif bg-orange-200 rounded-3xl px-3 pt-5 pb-1 shadow-2xl">
+        <h1 className="font-bold text-xl mb-5  ">
+          Figure : ----- Radar Chart of Chef Recipes Like Count -----
+        </h1>
       </div>
     </div>
   );

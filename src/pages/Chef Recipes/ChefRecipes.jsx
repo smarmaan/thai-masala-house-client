@@ -84,9 +84,9 @@ const ChefRecipes = () => {
  */}
 
       <div className="card w-96 bg-orange-200 text-center mx-auto">
-        <div className="card-body items-center text-center">
-          <h2 className="card-title text-2xl font-bold">
-            Amount of Total Recipes : {chefRecipes.length}
+        <div className="card py-5 mx-auto items-center text-center">
+          <h2 className="card-title text-2xl font-serif font-bold">
+            Amount of Total Recipes: {chefRecipes.length}
           </h2>
         </div>
       </div>
